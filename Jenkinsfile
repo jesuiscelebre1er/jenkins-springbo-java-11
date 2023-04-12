@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/username/repo.git'
+                git 'https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git'
             }
         }
         
