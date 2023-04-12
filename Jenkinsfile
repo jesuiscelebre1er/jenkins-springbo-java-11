@@ -1,26 +1,29 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('clone'{
+        stage('Clone repository') {
             steps {
-                sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git'
+                git 'https://github.com/username/repo.git'
             }
-            
         }
-
-//         stage('Build') {
-//              steps {
-//                  sh './mvnw clean package'
-//              }
-//          }
-
-//          stage('Test') {
-//              steps {
-//                  sh './mvnw test'
-//              }
-//          }
-
-
-     } 
+        
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                sh 'mvn deploy'
+            }
+        }
+    }
 }
