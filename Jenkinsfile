@@ -11,7 +11,7 @@ pipeline {
         
         stage('Clone repository') {
             steps {
-                sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git mytest-repo'
+                sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git myrepo-dir'
                
             }
             
@@ -20,7 +20,7 @@ pipeline {
         
         stage('create directory') {
             steps {
-                sh 'mkdir myrepo-dir'
+                sh 'mkdir test-dir'
             }
         }
         
@@ -37,6 +37,7 @@ pipeline {
             steps {
                 sh 'echo repertoire de travail'
                 sh 'ls -l ./'
+                sh 'cd myrepo-dir'
                 sh './mvnw clean package'
             }
         }
