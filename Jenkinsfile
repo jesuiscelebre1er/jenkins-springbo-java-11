@@ -4,6 +4,12 @@ pipeline {
     stages {
         stage('Clone repository') {
             
+             stage('clean workspace') {
+                steps {
+                    sh 'rm -r $JOB_NAME/*'
+                }
+            }
+            
             steps {
                 sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git mytest-repo'
                
