@@ -11,7 +11,7 @@ pipeline {
         
         stage('Clone repository') {
             steps {
-                sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git'
+                git 'https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git'
                
             }
             
