@@ -6,6 +6,7 @@ pipeline {
             
             steps {
                 sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git mytest-repo'
+                sh 'mkdir myrepo-dir'
             }
         }
         
