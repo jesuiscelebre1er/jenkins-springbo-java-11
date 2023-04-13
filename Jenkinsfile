@@ -35,6 +35,7 @@ pipeline {
         
         stage('Build') {
             steps {
+                sh 'echo repertoire de travail --- $pwd'
                 sh './mvnw clean package'
             }
         }
