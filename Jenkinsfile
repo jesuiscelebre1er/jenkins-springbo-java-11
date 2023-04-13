@@ -16,6 +16,10 @@ pipeline {
             steps {
                 sh 'mkdir myrepo-dir'
             }
+        }
+        
+         stage('test env var') {
+           
             steps {
                 sh 'echo mon project en cours $JOB_NAME'
             }
