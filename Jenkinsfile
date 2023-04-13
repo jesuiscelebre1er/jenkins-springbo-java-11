@@ -2,14 +2,14 @@ pipeline {
     agent any
     
     stages {
-        stage('Clone repository') {
-            
-             stage('clean workspace') {
-                steps {
-                    sh 'rm -r $JOB_NAME/*'
-                }
+        
+        stage('clean workspace') {
+            steps {
+                sh 'rm -r $JOB_NAME/*'
             }
-            
+        }
+        
+        stage('Clone repository') {
             steps {
                 sh 'git clone https://github.com/jesuiscelebre1er/jenkins-springbo-java-11.git mytest-repo'
                
