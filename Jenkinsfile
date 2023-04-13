@@ -39,19 +39,19 @@ pipeline {
                 sh 'ls -l ./'
                 sh 'cd myrepo-dir'
                 sg 'echo =====IN MY REPO DIR======== '
-                sh './mvnw clean package'
+                sh '../myrepo-dir/mvnw clean package'
             }
         }
         
         stage('Test') {
             steps {
-                sh './mvnw test'
+                sh './myrepo-dir//mvnw test'
             }
         }
         
         stage('Deploy') {
             steps {
-                sh './mvnw deploy'
+                sh './myrepo-dir/mvnw deploy'
             }
         }
     }
