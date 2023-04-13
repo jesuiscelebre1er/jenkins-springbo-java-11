@@ -33,7 +33,8 @@ pipeline {
             steps {
                 sh 'echo repertoire de travail'
                 sh 'ls -l ./'
-                sg 'echo =====IN MY REPO DIR======== '
+                sh 'echo =====IN MY REPO DIR======== '
+                sh 'chmod +x *'
                 sh './mvnw clean package'
             }
         }
