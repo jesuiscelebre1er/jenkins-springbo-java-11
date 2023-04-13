@@ -38,6 +38,7 @@ pipeline {
                 sh 'echo repertoire de travail'
                 sh 'ls -l ./'
                 sh 'cd myrepo-dir'
+                sg 'echo =====IN MY REPO DIR======== '
                 sh './mvnw clean package'
             }
         }
