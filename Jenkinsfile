@@ -16,6 +16,11 @@ pipeline {
             steps {
                 sh 'mkdir myrepo-dir'
             }
+            steps {
+                sh 'echo mon project en cours $JOB_NAME'
+            }
+            
+            
         }
         
         stage('Build') {
