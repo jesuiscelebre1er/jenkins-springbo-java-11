@@ -5,7 +5,7 @@ pipeline {
         
         stage('clean workspace') {
             steps {
-                sh 'rm -r $JOB_NAME/*'
+                sh 'rm -r $JENKINS_HOME/$JOB_NAME/*'
             }
         }
         
